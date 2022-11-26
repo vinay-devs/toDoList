@@ -30,5 +30,28 @@ form textarea {
 button {
   background-color: azure;
   border-radius: 5px;
-  border: 0ch;
+  border: 2px solid;
+  margin: auto;
+}
+
+.note {
+  border: 2px solid;
+  width: 240px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  align-content: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.note h4 {
+  font-size: 15px;
+  margin-bottom: 0%;
+  margin-top: 1%;
+}
+.note p {
+  margin-top: 1%;
+}
+.note button {
+  margin-bottom: 1%;
 }
