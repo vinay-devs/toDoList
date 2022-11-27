@@ -11,13 +11,29 @@ function App() {
       return [...prev, note];
     });
   }
+  function deleteItem(id) {
+    return setItems((prev) => {
+      return items.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
     <div>
       <Header />
       <Createarea getData={getData} />
       <h3>Todo</h3>
       {items.map((item, index) => {
-        return <Card key={index} title={item.title} content={item.content} />;
+        return (
+          <Card
+            key={index}
+            id={index}
+            title={item.title}
+            content={item.content}
+            deleteItem={deleteItem}
+          />
+        );
       })}
     </div>
   );

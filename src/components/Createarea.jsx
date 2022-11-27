@@ -3,7 +3,7 @@ import AddIcon from "@mui/icons-material/Add";
 
 function Createarea(props) {
   const [note, setNote] = useState({
-    Title: "",
+    title: "",
     content: "",
   });
   function addData(event) {
@@ -21,7 +21,7 @@ function Createarea(props) {
       <input
         onChange={takeValue}
         type="text"
-        name="Title"
+        name="title"
         placeholder="title"
       ></input>
       <textarea
