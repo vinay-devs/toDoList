@@ -18,7 +18,13 @@ function App() {
       });
     });
   }
+  console.log(items);
 
+  fetch("http://localhost:4000")
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("done");
+    });
   return (
     <div>
       <Header />

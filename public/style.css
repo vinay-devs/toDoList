@@ -42,6 +42,8 @@ button {
   align-content: center;
   margin: auto;
   margin-bottom: 20px;
+  background-color: azure;
+  backface-visibility: hidden;
 }
 
 .note h4 {

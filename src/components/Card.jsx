@@ -5,7 +5,7 @@ function Card(props) {
     props.deleteItem(props.id);
   }
   return (
-    <div className="note">
+    <div className="note" draggable>
       <h4>{props.title}</h4>
       <p>{props.content}</p>
       <button onClick={deleteNote}>Delete</button>

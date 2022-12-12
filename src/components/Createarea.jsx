@@ -8,6 +8,13 @@ function Createarea(props) {
   });
   function addData(event) {
     props.getData(note);
+    fetch("http://localhost:4000/hello", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ a: note }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
     event.preventDefault();
   }
   function takeValue(event) {
@@ -16,6 +23,7 @@ function Createarea(props) {
       return { ...prev, [name]: value };
     });
   }
+
   return (
     <form>
       <input
