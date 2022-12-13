@@ -20,7 +20,7 @@ function App() {
   }
   console.log(items);
 
-  fetch("http://localhost:4000")
+  fetch("http://localhost:4000/task")
     .then((res) => res.json())
     .then((data) => {
       console.log("done");

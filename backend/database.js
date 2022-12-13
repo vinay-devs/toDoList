@@ -4,8 +4,8 @@ const ListItemsSchema = mongoose.Schema({
   id: { type: Number },
   item: [
     {
-      title: { type: String },
-      content: { type: String },
+      title: String,
+      content: String,
     },
   ],
 });

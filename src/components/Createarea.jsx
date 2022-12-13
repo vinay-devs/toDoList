@@ -7,15 +7,17 @@ function Createarea(props) {
     content: "",
   });
   function addData(event) {
-    props.getData(note);
-    fetch("http://localhost:4000/hello", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ a: note }),
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-    event.preventDefault();
+    if (note.title != "" && note.content != "") {
+      props.getData(note);
+      fetch("http://localhost:4000/task", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ a: note }),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+      //event.preventDefault();
+    }
   }
   function takeValue(event) {
     const { name, value } = event.target;
