@@ -7,16 +7,16 @@ function Createarea(props) {
     content: "",
   });
   function addData(event) {
-    if (note.title != "" && note.content != "") {
-      props.getData(note);
+    if (note.title !== "" && note.content !== "") {
+      // props.getData(note);
       fetch("http://localhost:4000/task", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ a: note }),
       })
         .then((response) => response.json())
-        .then((data) => console.log(data));
-      //event.preventDefault();
+        .then((data) => props.onAdd());
+      event.preventDefault();
     }
   }
   function takeValue(event) {
